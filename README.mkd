@@ -1,0 +1,9 @@
+# Introduction
+
+unite-maven is a [unite.vim](https://github.com/Shougo/unite.vim)'s source
+to search libraries of in the maven repository. And then you can copy the 
+the settings of library dependency. Currently sbt format is only supported.
+
+# Usage
+
+    :Unite maven_search
