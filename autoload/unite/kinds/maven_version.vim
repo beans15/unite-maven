@@ -22,6 +22,8 @@ function! s:kind.action_table.yank_sbt.func(candidate)
 
   if has('clipboard')
     call setreg(v:register, text)
+
+    call unite#print_message('Yanked: '.text)
   endif
 endfunction
 
