@@ -1,12 +1,12 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:max_candidates = 50
+let g:unite_source_maven_max_candidates = 100
 
 let s:source = {
   \   "name": "maven_search",
   \   "description": "Search for Maven Repository",
-  \   "max_candidates": s:max_candidates,
+  \   "max_candidates": g:unite_source_maven_max_candidates,
   \   "action_table": {},
   \ }
 
