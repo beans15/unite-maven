@@ -18,9 +18,9 @@ function! unite#sources#maven_search#search(word)
   let url = ""
   if type(a:word) == type({}) && has_key(a:word, "g") && has_key(a:word, "a")
     let query = printf('g:"%s"+AND+a:"%s"', a:word.g, a:word.a)
-    let url = "http://search.maven.org/solrsearch/select?q=".query."&core=gav&rows=".s:max_candidates."&wt=json"
+    let url = "http://search.maven.org/solrsearch/select?q=".query."&core=gav&rows=".g:unite_source_maven_max_candidates."&wt=json"
   else
-    let url = "http://search.maven.org/solrsearch/select?q=".a:word."&rows=".s:max_candidates."&wt=json"
+    let url = "http://search.maven.org/solrsearch/select?q=".a:word."&rows=".g:unite_source_maven_max_candidates."&wt=json"
   endif
   let res = webapi#http#get(url)
 
